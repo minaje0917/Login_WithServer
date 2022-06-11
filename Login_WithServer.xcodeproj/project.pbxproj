@@ -10,9 +10,9 @@
 		7780BFF028549184009B8341 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7780BFEF28549184009B8341 /* AppDelegate.swift */; };
 		7780BFF228549184009B8341 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7780BFF128549184009B8341 /* SceneDelegate.swift */; };
 		7780BFF428549184009B8341 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7780BFF328549184009B8341 /* ViewController.swift */; };
-		7780BFF728549184009B8341 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7780BFF528549184009B8341 /* Main.storyboard */; };
 		7780BFF928549184009B8341 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7780BFF828549184009B8341 /* Assets.xcassets */; };
 		7780BFFC28549184009B8341 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7780BFFA28549184009B8341 /* LaunchScreen.storyboard */; };
+		7780C0052854935D009B8341 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 7780C0042854935D009B8341 /* Then */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,7 +20,6 @@
 		7780BFEF28549184009B8341 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7780BFF128549184009B8341 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		7780BFF328549184009B8341 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		7780BFF628549184009B8341 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7780BFF828549184009B8341 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7780BFFB28549184009B8341 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7780BFFD28549184009B8341 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -31,6 +30,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7780C0052854935D009B8341 /* Then in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,7 +59,6 @@
 				7780BFEF28549184009B8341 /* AppDelegate.swift */,
 				7780BFF128549184009B8341 /* SceneDelegate.swift */,
 				7780BFF328549184009B8341 /* ViewController.swift */,
-				7780BFF528549184009B8341 /* Main.storyboard */,
 				7780BFF828549184009B8341 /* Assets.xcassets */,
 				7780BFFA28549184009B8341 /* LaunchScreen.storyboard */,
 				7780BFFD28549184009B8341 /* Info.plist */,
@@ -83,6 +82,9 @@
 			dependencies = (
 			);
 			name = Login_WithServer;
+			packageProductDependencies = (
+				7780C0042854935D009B8341 /* Then */,
+			);
 			productName = Login_WithServer;
 			productReference = 7780BFEC28549184009B8341 /* Login_WithServer.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +113,9 @@
 				Base,
 			);
 			mainGroup = 7780BFE328549183009B8341;
+			packageReferences = (
+				7780C0032854935D009B8341 /* XCRemoteSwiftPackageReference "Then" */,
+			);
 			productRefGroup = 7780BFED28549184009B8341 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,7 +132,6 @@
 			files = (
 				7780BFFC28549184009B8341 /* LaunchScreen.storyboard in Resources */,
 				7780BFF928549184009B8341 /* Assets.xcassets in Resources */,
-				7780BFF728549184009B8341 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,14 +151,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		7780BFF528549184009B8341 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7780BFF628549184009B8341 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		7780BFFA28549184009B8341 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -291,7 +287,6 @@
 				INFOPLIST_FILE = Login_WithServer/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -318,7 +313,6 @@
 				INFOPLIST_FILE = Login_WithServer/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -356,6 +350,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7780C0032854935D009B8341 /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7780C0042854935D009B8341 /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7780C0032854935D009B8341 /* XCRemoteSwiftPackageReference "Then" */;
+			productName = Then;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7780BFE428549183009B8341 /* Project object */;
 }
