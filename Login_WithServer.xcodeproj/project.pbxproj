@@ -13,6 +13,7 @@
 		7780BFF928549184009B8341 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7780BFF828549184009B8341 /* Assets.xcassets */; };
 		7780BFFC28549184009B8341 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7780BFFA28549184009B8341 /* LaunchScreen.storyboard */; };
 		7780C0052854935D009B8341 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 7780C0042854935D009B8341 /* Then */; };
+		7780C00828549AE0009B8341 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 7780C00728549AE0009B8341 /* SnapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7780C0052854935D009B8341 /* Then in Frameworks */,
+				7780C00828549AE0009B8341 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +86,7 @@
 			name = Login_WithServer;
 			packageProductDependencies = (
 				7780C0042854935D009B8341 /* Then */,
+				7780C00728549AE0009B8341 /* SnapKit */,
 			);
 			productName = Login_WithServer;
 			productReference = 7780BFEC28549184009B8341 /* Login_WithServer.app */;
@@ -115,6 +118,7 @@
 			mainGroup = 7780BFE328549183009B8341;
 			packageReferences = (
 				7780C0032854935D009B8341 /* XCRemoteSwiftPackageReference "Then" */,
+				7780C00628549AE0009B8341 /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = 7780BFED28549184009B8341 /* Products */;
 			projectDirPath = "";
@@ -360,6 +364,14 @@
 				kind = branch;
 			};
 		};
+		7780C00628549AE0009B8341 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -367,6 +379,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 7780C0032854935D009B8341 /* XCRemoteSwiftPackageReference "Then" */;
 			productName = Then;
+		};
+		7780C00728549AE0009B8341 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7780C00628549AE0009B8341 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
