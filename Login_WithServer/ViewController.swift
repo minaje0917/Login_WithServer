@@ -11,6 +11,12 @@ import SnapKit
 
 class ViewController: UIViewController, UITextFieldDelegate {
     private let bounds = UIScreen.main.bounds
+    
+    lazy var titleLabel = UILabel().then {
+        $0.text = "로그인을 해주세요"
+        $0.textColor = .black
+        $0.font = .boldSystemFont(ofSize: 25)
+    }
 
     lazy var signUpButton = UIButton().then {
         $0.setTitle("회원가입", for: .normal)
@@ -22,6 +28,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         $0.setTitle("로그인", for: .normal)
         $0.backgroundColor = .black.withAlphaComponent(0.8)
         $0.layer.cornerRadius = 10
+        $0.addTarget(self, action: #selector(LoginAction), for: .touchUpInside)
     }
     
     override func viewDidLoad() {
@@ -32,9 +39,16 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     private func addView() {
-        [signUpButton, signInButton].forEach {
+        [signUpButton, signInButton, titleLabel].forEach {
             view.addSubview($0)
         }
+    }
+    
+    @objc func LoginAction() {
+        let lvc = LoginViewController()
+        lvc.modalPresentationStyle = .fullScreen
+        self.navigationController?.pushViewController(lvc, animated: true)
+        
     }
 
     private func setLayout() {
@@ -50,6 +64,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
             $0.trailing.equalToSuperview().offset(-30)
             $0.top.equalToSuperview().offset(570)
             }
+        titleLabel.snp.makeConstraints {
+            $0.centerX.equalToSuperview()
+            $0.top.equalToSuperview().offset(250)
+        }
     }
     
 
