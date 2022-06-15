@@ -52,8 +52,11 @@ class SignUpViewController: UIViewController {
     
     lazy var loginButton = UIButton().then {
         $0.setTitle("다음", for: .normal)
+        $0.setImage(.init(systemName: "chevron.right"), for: .normal)
+        $0.tintColor = .white
         $0.backgroundColor = .systemBlue.withAlphaComponent(0.8)
         $0.layer.cornerRadius = 10
+        $0.semanticContentAttribute = .forceRightToLeft
         //$0.addTarget(self, action: #selector(LoginAction), for: .touchUpInside)
     }
     override func viewDidLoad() {
