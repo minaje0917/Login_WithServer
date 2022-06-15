@@ -22,6 +22,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         $0.setTitle("회원가입", for: .normal)
         $0.backgroundColor = .black.withAlphaComponent(0.8)
         $0.layer.cornerRadius = 10
+        $0.addTarget(self, action: #selector(SignUpAction), for: .touchUpInside)
     }
     
     lazy var signInButton = UIButton().then {
@@ -51,6 +52,13 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
     }
 
+    @objc func SignUpAction() {
+        let svc = SignUpViewController()
+        svc.modalPresentationStyle = .fullScreen
+        self.navigationController?.pushViewController(svc, animated: true)
+        
+    }
+    
     private func setLayout() {
         signUpButton.snp.makeConstraints {
             $0.centerX.equalToSuperview()

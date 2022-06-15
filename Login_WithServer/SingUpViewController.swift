@@ -1,10 +1,3 @@
-//
-//  LoginViewController.swift
-//  Login_WithServer
-//
-//  Created by 선민재 on 2022/06/14.
-//
-
 import UIKit
 import SnapKit
 import Then
@@ -21,7 +14,7 @@ class LoginViewController: UIViewController {
     }
     
     lazy var titleLabel = UILabel().then {
-        $0.text = "로그인"
+        $0.text = "회원가입"
         $0.textColor = .black
         $0.font = .boldSystemFont(ofSize: 25)
         
@@ -42,7 +35,7 @@ class LoginViewController: UIViewController {
         $0.layer.borderColor = UIColor.systemGray3.cgColor
     }
     lazy var loginButton = UIButton().then {
-        $0.setTitle("로그인", for: .normal)
+        $0.setTitle("회원가입", for: .normal)
         $0.backgroundColor = .systemBlue.withAlphaComponent(0.8)
         $0.layer.cornerRadius = 10
         //$0.addTarget(self, action: #selector(LoginAction), for: .touchUpInside)

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		773527C828580DF0002756B9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773527C728580DF0002756B9 /* LoginViewController.swift */; };
+		773527CC28595A71002756B9 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773527CB28595A71002756B9 /* SignUpViewController.swift */; };
 		7780BFF028549184009B8341 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7780BFEF28549184009B8341 /* AppDelegate.swift */; };
 		7780BFF228549184009B8341 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7780BFF128549184009B8341 /* SceneDelegate.swift */; };
 		7780BFF428549184009B8341 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7780BFF328549184009B8341 /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		773527C728580DF0002756B9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		773527CB28595A71002756B9 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		7780BFEC28549184009B8341 /* Login_WithServer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Login_WithServer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7780BFEF28549184009B8341 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7780BFF128549184009B8341 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 				7780BFFA28549184009B8341 /* LaunchScreen.storyboard */,
 				7780BFFD28549184009B8341 /* Info.plist */,
 				773527C728580DF0002756B9 /* LoginViewController.swift */,
+				773527CB28595A71002756B9 /* SignUpViewController.swift */,
 			);
 			path = Login_WithServer;
 			sourceTree = "<group>";
@@ -153,6 +156,7 @@
 				7780BFF428549184009B8341 /* ViewController.swift in Sources */,
 				7780BFF028549184009B8341 /* AppDelegate.swift in Sources */,
 				7780BFF228549184009B8341 /* SceneDelegate.swift in Sources */,
+				773527CC28595A71002756B9 /* SignUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
