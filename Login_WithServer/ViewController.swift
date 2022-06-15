@@ -56,7 +56,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
         let svc = SignUpViewController()
         svc.modalPresentationStyle = .fullScreen
         self.navigationController?.pushViewController(svc, animated: true)
-        
     }
     
     private func setLayout() {

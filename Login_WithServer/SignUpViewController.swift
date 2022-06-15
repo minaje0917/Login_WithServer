@@ -50,24 +50,21 @@ class SignUpViewController: UIViewController {
         $0.layer.borderColor = UIColor.systemGray3.cgColor
     }
     
-    lazy var loginButton = UIButton().then {
-        $0.setTitle("다음", for: .normal)
-        $0.setImage(.init(systemName: "chevron.right"), for: .normal)
-        $0.tintColor = .white
+    lazy var signUpButton = UIButton().then {
+        $0.setTitle("회원가입", for: .normal)
         $0.backgroundColor = .systemBlue.withAlphaComponent(0.8)
         $0.layer.cornerRadius = 10
         $0.semanticContentAttribute = .forceRightToLeft
-        //$0.addTarget(self, action: #selector(LoginAction), for: .touchUpInside)
+        $0.addTarget(self, action: #selector(signUpAction), for: .touchUpInside)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
         addView()
         setLayout()
         view.backgroundColor = .white
-        
     }
     private func addView() {
-        [titleLabel, idField, pwField, loginButton, checkPwField].forEach {
+        [titleLabel, idField, pwField, signUpButton, checkPwField].forEach {
             view.addSubview($0)
         }
     }
@@ -94,12 +91,22 @@ class SignUpViewController: UIViewController {
             $0.trailing.equalToSuperview().offset(-30)
             $0.size.equalTo(bounds.height * 0.06)
         }
-        loginButton.snp.makeConstraints {
+        signUpButton.snp.makeConstraints {
             $0.centerX.equalToSuperview()
             $0.size.equalTo(bounds.height * 0.07)
             $0.trailing.equalToSuperview().offset(-30)
             $0.top.equalToSuperview().offset(600)
         }
+    }
+    
+    @objc func signUpAction() {
+        let alert = UIAlertController(title: nil, message: "회원가입에 성공 했습니다!", preferredStyle: UIAlertController.Style.alert)
+        let alertAction = UIAlertAction(title: "OK", style: .default) { (action) in
+            self.navigationController?.popViewController(animated: true)
+        }
+        alert.addAction(alertAction)
+        present(alert, animated: false, completion: nil)
+        
     }
     
 }
