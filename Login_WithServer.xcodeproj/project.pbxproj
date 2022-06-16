@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		773527C828580DF0002756B9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773527C728580DF0002756B9 /* LoginViewController.swift */; };
 		773527CC28595A71002756B9 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773527CB28595A71002756B9 /* SignUpViewController.swift */; };
+		773527CF2859D85F002756B9 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 773527CE2859D85F002756B9 /* Alamofire */; };
+		773527D3285AF1F5002756B9 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773527D2285AF1F5002756B9 /* NetworkResult.swift */; };
+		773527D7285AF263002756B9 /* LoginDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773527D6285AF263002756B9 /* LoginDataModel.swift */; };
+		773527D9285AF2D6002756B9 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773527D8285AF2D6002756B9 /* LoginService.swift */; };
 		7780BFF028549184009B8341 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7780BFEF28549184009B8341 /* AppDelegate.swift */; };
 		7780BFF228549184009B8341 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7780BFF128549184009B8341 /* SceneDelegate.swift */; };
 		7780BFF428549184009B8341 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7780BFF328549184009B8341 /* ViewController.swift */; };
@@ -21,6 +25,9 @@
 /* Begin PBXFileReference section */
 		773527C728580DF0002756B9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		773527CB28595A71002756B9 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		773527D2285AF1F5002756B9 /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
+		773527D6285AF263002756B9 /* LoginDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDataModel.swift; sourceTree = "<group>"; };
+		773527D8285AF2D6002756B9 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		7780BFEC28549184009B8341 /* Login_WithServer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Login_WithServer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7780BFEF28549184009B8341 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7780BFF128549184009B8341 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -35,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				773527CF2859D85F002756B9 /* Alamofire in Frameworks */,
 				7780C0052854935D009B8341 /* Then in Frameworks */,
 				7780C00828549AE0009B8341 /* SnapKit in Frameworks */,
 			);
@@ -70,6 +78,9 @@
 				7780BFFD28549184009B8341 /* Info.plist */,
 				773527C728580DF0002756B9 /* LoginViewController.swift */,
 				773527CB28595A71002756B9 /* SignUpViewController.swift */,
+				773527D2285AF1F5002756B9 /* NetworkResult.swift */,
+				773527D6285AF263002756B9 /* LoginDataModel.swift */,
+				773527D8285AF2D6002756B9 /* LoginService.swift */,
 			);
 			path = Login_WithServer;
 			sourceTree = "<group>";
@@ -93,6 +104,7 @@
 			packageProductDependencies = (
 				7780C0042854935D009B8341 /* Then */,
 				7780C00728549AE0009B8341 /* SnapKit */,
+				773527CE2859D85F002756B9 /* Alamofire */,
 			);
 			productName = Login_WithServer;
 			productReference = 7780BFEC28549184009B8341 /* Login_WithServer.app */;
@@ -125,6 +137,7 @@
 			packageReferences = (
 				7780C0032854935D009B8341 /* XCRemoteSwiftPackageReference "Then" */,
 				7780C00628549AE0009B8341 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				773527CD2859D85F002756B9 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 7780BFED28549184009B8341 /* Products */;
 			projectDirPath = "";
@@ -154,7 +167,10 @@
 			files = (
 				773527C828580DF0002756B9 /* LoginViewController.swift in Sources */,
 				7780BFF428549184009B8341 /* ViewController.swift in Sources */,
+				773527D7285AF263002756B9 /* LoginDataModel.swift in Sources */,
+				773527D9285AF2D6002756B9 /* LoginService.swift in Sources */,
 				7780BFF028549184009B8341 /* AppDelegate.swift in Sources */,
+				773527D3285AF1F5002756B9 /* NetworkResult.swift in Sources */,
 				7780BFF228549184009B8341 /* SceneDelegate.swift in Sources */,
 				773527CC28595A71002756B9 /* SignUpViewController.swift in Sources */,
 			);
@@ -364,6 +380,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		773527CD2859D85F002756B9 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 		7780C0032854935D009B8341 /* XCRemoteSwiftPackageReference "Then" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/devxoul/Then";
@@ -383,6 +407,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		773527CE2859D85F002756B9 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 773527CD2859D85F002756B9 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
 		7780C0042854935D009B8341 /* Then */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 7780C0032854935D009B8341 /* XCRemoteSwiftPackageReference "Then" */;

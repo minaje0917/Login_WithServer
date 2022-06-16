@@ -8,6 +8,7 @@
 import UIKit
 import SnapKit
 import Then
+import Alamofire
 
 class LoginViewController: UIViewController {
     private let bounds = UIScreen.main.bounds
