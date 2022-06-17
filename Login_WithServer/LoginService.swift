@@ -1,50 +1,52 @@
-//
-//  LoginService.swift
-//  Login_WithServer
-//
-//  Created by 선민재 on 2022/06/16.
-//
+
+
 
 import Foundation
-import Alamofire
+import Moya
 
-struct LoginService {
-    
-    static let shared = LoginService()
-    
-    func getLoginInfo(completion : @escaping (NetworkResult<Any>) -> Void) {
-        
-        let URL = ""
-        let header : HTTPHeaders = ["Content-Type" : "application/json"]
-        let dataRequest = AF.request(URL, method: .get, encoding: JSONEncoding.default, headers: header)
-        dataRequest.responseData { dataResponse in
-            switch dataResponse.result {
-                case .success:
-                    guard let statusCode = dataResponse.response?.statusCode else {return}
-                    guard let value = dataResponse.value else {return}
-                    let networkResult = self.judgeStatus(by: statusCode, value)
-                    completion(networkResult)
-            case . failure: completion(.pathErr)
+enum LoginService {
+    case signUp(param: SignupRequest)
+    case signIn(param: SigninRequest)
+}
 
-            }
-        }
-        
+extension LoginService: TargetType {
+    public var baseURL: URL{
+        return URL(string: GeneralAPI.baseURL)!
     }
     
-    private func judgeStatus(by statusCode: Int, _ data: Data) -> NetworkResult<Any>
-    {
-        switch statusCode {
-        case 200: return isValidData(data: data)
-        case 400: return .pathErr
-        case 500: return .serverErr
-        default: return .networkFail
-            
+    var path: String {
+        switch self {
+        case .signUp:
+            return "/users/register"
+        case .signIn:
+            return "users/login"
         }
     }
-    private func isValidData (data: Data) -> NetworkResult<Any> {
-        let decoder = JSONDecoder()
-        guard let decodeData = try? decoder.decode(LoginDataModel.self, from: data)
-        else {return .pathErr}
-        return .success(decodeData.id)
+    
+    var method: Moya.Method {
+        switch self {
+        case .signIn,.signUp:
+            return .post
+        }
+    }
+    
+    var sampleData: Data {
+        return "@@".data(using: .utf8)
+    }
+    
+    var task: Task {
+        switch self {
+        case .signUp(let param):
+            return .requestJSONEncodable(param)
+        case .signIn(let param):
+            return .requestJSONEncodable(param)
+        }
+    }
+    
+    var headers: [String : String]? {
+        switch self {
+        default:
+            return["Content-Type":"application/json"]
+        }
     }
 }
