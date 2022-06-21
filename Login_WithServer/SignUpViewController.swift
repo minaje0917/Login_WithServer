@@ -8,9 +8,13 @@
 import UIKit
 import SnapKit
 import Then
+import Moya
 
 class SignUpViewController: UIViewController {
     private let bounds = UIScreen.main.bounds
+    private let authProvider = MoyaProvider<LoginService>()
+    
+    var userDate: SignupModel?
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
