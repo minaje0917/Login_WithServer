@@ -114,3 +114,11 @@ class SignUpViewController: UIViewController {
     }
     
 }
+
+
+extension SignUpViewController {
+    func signUp() {
+        let param = SignupRequest.init(self.idField.text!, self.pwField.text!)
+        print(param)
+    }
+}
