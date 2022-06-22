@@ -60,6 +60,8 @@ class LoginViewController: UIViewController {
             view.addSubview($0)
         }
     }
+    
+    
     private func setLayout() {
         titleLabel.snp.makeConstraints {
             $0.centerX.equalToSuperview()

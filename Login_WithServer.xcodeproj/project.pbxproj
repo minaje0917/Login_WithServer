@@ -10,12 +10,7 @@
 		773527C828580DF0002756B9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773527C728580DF0002756B9 /* LoginViewController.swift */; };
 		773527CC28595A71002756B9 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773527CB28595A71002756B9 /* SignUpViewController.swift */; };
 		773527CF2859D85F002756B9 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 773527CE2859D85F002756B9 /* Alamofire */; };
-		773527D3285AF1F5002756B9 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773527D2285AF1F5002756B9 /* NetworkResult.swift */; };
-		773527D9285AF2D6002756B9 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773527D8285AF2D6002756B9 /* LoginService.swift */; };
 		773527DD285C21F0002756B9 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 773527DC285C21F0002756B9 /* Moya */; };
-		773527DF285C24E0002756B9 /* GeneralAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773527DE285C24E0002756B9 /* GeneralAPI.swift */; };
-		773527E128615A55002756B9 /* SignupRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773527E028615A55002756B9 /* SignupRequest.swift */; };
-		773527E42861686D002756B9 /* SignupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773527E32861686D002756B9 /* SignupModel.swift */; };
 		7780BFF028549184009B8341 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7780BFEF28549184009B8341 /* AppDelegate.swift */; };
 		7780BFF228549184009B8341 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7780BFF128549184009B8341 /* SceneDelegate.swift */; };
 		7780BFF428549184009B8341 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7780BFF328549184009B8341 /* ViewController.swift */; };
@@ -28,11 +23,6 @@
 /* Begin PBXFileReference section */
 		773527C728580DF0002756B9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		773527CB28595A71002756B9 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
-		773527D2285AF1F5002756B9 /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
-		773527D8285AF2D6002756B9 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
-		773527DE285C24E0002756B9 /* GeneralAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralAPI.swift; sourceTree = "<group>"; };
-		773527E028615A55002756B9 /* SignupRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupRequest.swift; sourceTree = "<group>"; };
-		773527E32861686D002756B9 /* SignupModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupModel.swift; sourceTree = "<group>"; };
 		7780BFEC28549184009B8341 /* Login_WithServer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Login_WithServer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7780BFEF28549184009B8341 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7780BFF128549184009B8341 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -84,11 +74,6 @@
 				7780BFFD28549184009B8341 /* Info.plist */,
 				773527C728580DF0002756B9 /* LoginViewController.swift */,
 				773527CB28595A71002756B9 /* SignUpViewController.swift */,
-				773527D2285AF1F5002756B9 /* NetworkResult.swift */,
-				773527D8285AF2D6002756B9 /* LoginService.swift */,
-				773527DE285C24E0002756B9 /* GeneralAPI.swift */,
-				773527E028615A55002756B9 /* SignupRequest.swift */,
-				773527E32861686D002756B9 /* SignupModel.swift */,
 			);
 			path = Login_WithServer;
 			sourceTree = "<group>";
@@ -177,13 +162,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				773527C828580DF0002756B9 /* LoginViewController.swift in Sources */,
-				773527E42861686D002756B9 /* SignupModel.swift in Sources */,
 				7780BFF428549184009B8341 /* ViewController.swift in Sources */,
-				773527D9285AF2D6002756B9 /* LoginService.swift in Sources */,
-				773527E128615A55002756B9 /* SignupRequest.swift in Sources */,
-				773527DF285C24E0002756B9 /* GeneralAPI.swift in Sources */,
 				7780BFF028549184009B8341 /* AppDelegate.swift in Sources */,
-				773527D3285AF1F5002756B9 /* NetworkResult.swift in Sources */,
 				7780BFF228549184009B8341 /* SceneDelegate.swift in Sources */,
 				773527CC28595A71002756B9 /* SignUpViewController.swift in Sources */,
 			);

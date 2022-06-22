@@ -12,9 +12,10 @@ import Moya
 
 class SignUpViewController: UIViewController {
     private let bounds = UIScreen.main.bounds
-    private let authProvider = MoyaProvider<LoginService>()
     
-    var userDate: SignupModel?
+    var essentialFieldList = [UITextField]()
+    
+    
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
@@ -66,6 +67,7 @@ class SignUpViewController: UIViewController {
         addView()
         setLayout()
         view.backgroundColor = .white
+        essentialFieldList = [idField, pwField]
     }
     private func addView() {
         [titleLabel, idField, pwField, signUpButton, checkPwField].forEach {
@@ -104,21 +106,54 @@ class SignUpViewController: UIViewController {
     }
     
     @objc func signUpAction() {
-        let alert = UIAlertController(title: nil, message: "회원가입에 성공 했습니다!", preferredStyle: UIAlertController.Style.alert)
-        let alertAction = UIAlertAction(title: "OK", style: .default) { (action) in
-            self.navigationController?.popViewController(animated: true)
-        }
-        alert.addAction(alertAction)
-        present(alert, animated: false, completion: nil)
         
+        for field in essentialFieldList {
+            if !isFilled(field) {
+                signUpAlert(field)
+            }
+            guard let password = pwField.text, let passwordCheck = checkPwField.text, password == passwordCheck else {
+                passwordAlert(title: "비밀번호가 일치하지 않습니다.")
+                return
+            }
+        }
     }
     
-}
-
-
-extension SignUpViewController {
-    func signUp() {
-        let param = SignupRequest.init(self.idField.text!, self.pwField.text!)
-        print(param)
+    func signUpAlert(_ field: UITextField) {
+        DispatchQueue.main.async {
+            var title = ""
+            switch field {
+            case self.idField:
+                title = "아이디를 입력해주세요."
+            case self.pwField:
+                title = "비밀번호를 입력해주세요."
+            case self.checkPwField:
+                title = "비밀번호를 확인해주세요."
+            default:
+                title = "error"
+            }
+            let controller = UIAlertController(title: title, message: nil, preferredStyle: .alert)
+            let cancelAction = UIAlertAction(title: "닫기", style: .cancel) {(action) in
+                
+            }
+            controller.addAction(cancelAction)
+            self.present(controller, animated: true, completion: nil)
+        }
     }
+    func passwordAlert(title:String) {
+        DispatchQueue.main.async {
+            let controller = UIAlertController(title: title, message: nil, preferredStyle: .alert)
+            let cancelAction = UIAlertAction(title: "닫기", style: .cancel) {(action) in
+                
+            }
+            controller.addAction(cancelAction)
+            self.present(controller, animated: true, completion: nil)
+        }
+    }
+    func isFilled(_ textField: UITextField) -> Bool {
+        guard let text = textField.text, !text.isEmpty else {
+            return false
+        }
+        return true
+    }
+    
 }
