@@ -67,7 +67,7 @@ class SignUpViewController: UIViewController {
         addView()
         setLayout()
         view.backgroundColor = .white
-        essentialFieldList = [idField, pwField]
+        essentialFieldList = [idField, pwField, checkPwField]
     }
     private func addView() {
         [titleLabel, idField, pwField, signUpButton, checkPwField].forEach {

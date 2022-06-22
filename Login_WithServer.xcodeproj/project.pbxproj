@@ -18,6 +18,9 @@
 		7780BFFC28549184009B8341 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7780BFFA28549184009B8341 /* LaunchScreen.storyboard */; };
 		7780C0052854935D009B8341 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 7780C0042854935D009B8341 /* Then */; };
 		7780C00828549AE0009B8341 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 7780C00728549AE0009B8341 /* SnapKit */; };
+		779FAF5B28632D6A00234E1F /* GeneralAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779FAF5A28632D6A00234E1F /* GeneralAPI.swift */; };
+		779FAF5D28632E0700234E1F /* LoginServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779FAF5C28632E0700234E1F /* LoginServices.swift */; };
+		779FAF5F2863317700234E1F /* SignupRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779FAF5E2863317700234E1F /* SignupRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,9 @@
 		7780BFF828549184009B8341 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7780BFFB28549184009B8341 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7780BFFD28549184009B8341 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		779FAF5A28632D6A00234E1F /* GeneralAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralAPI.swift; sourceTree = "<group>"; };
+		779FAF5C28632E0700234E1F /* LoginServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginServices.swift; sourceTree = "<group>"; };
+		779FAF5E2863317700234E1F /* SignupRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +80,9 @@
 				7780BFFD28549184009B8341 /* Info.plist */,
 				773527C728580DF0002756B9 /* LoginViewController.swift */,
 				773527CB28595A71002756B9 /* SignUpViewController.swift */,
+				779FAF5A28632D6A00234E1F /* GeneralAPI.swift */,
+				779FAF5C28632E0700234E1F /* LoginServices.swift */,
+				779FAF5E2863317700234E1F /* SignupRequest.swift */,
 			);
 			path = Login_WithServer;
 			sourceTree = "<group>";
@@ -164,7 +173,10 @@
 				773527C828580DF0002756B9 /* LoginViewController.swift in Sources */,
 				7780BFF428549184009B8341 /* ViewController.swift in Sources */,
 				7780BFF028549184009B8341 /* AppDelegate.swift in Sources */,
+				779FAF5B28632D6A00234E1F /* GeneralAPI.swift in Sources */,
 				7780BFF228549184009B8341 /* SceneDelegate.swift in Sources */,
+				779FAF5F2863317700234E1F /* SignupRequest.swift in Sources */,
+				779FAF5D28632E0700234E1F /* LoginServices.swift in Sources */,
 				773527CC28595A71002756B9 /* SignUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
