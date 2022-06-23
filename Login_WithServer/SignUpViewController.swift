@@ -13,6 +13,9 @@ import Moya
 class SignUpViewController: UIViewController {
     private let bounds = UIScreen.main.bounds
     
+    private let authProvider = MoyaProvider<LoginServices>()
+    var userData: SignupModel?
+    
     var essentialFieldList = [UITextField]()
     
     
@@ -156,4 +159,24 @@ class SignUpViewController: UIViewController {
         return true
     }
     
+}
+
+
+extension SignUpViewController {
+    func signUp() {
+        let param = SignupRequest.init(self.idField.text!, self.pwField.text!)
+        print(param)
+        authProvider.request(.signUp(param: param)) {response in
+            switch response {
+            case .success(let result):
+                do {
+                    self.userData = try result.map(SignupModel.self)
+                } catch(let err) {
+                    print(err.localizedDescription)
+                }
+            case .failure(let err):
+                print(err.localizedDescription)
+            }
+        }
+    }
 }
