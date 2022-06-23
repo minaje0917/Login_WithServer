@@ -16,5 +16,5 @@ struct SignupModel: Codable {
 }
 
 struct SignupResponse: Codable {
-    let id: String
+    let email: String
 }

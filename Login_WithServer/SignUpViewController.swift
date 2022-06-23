@@ -118,7 +118,9 @@ class SignUpViewController: UIViewController {
                 passwordAlert(title: "비밀번호가 일치하지 않습니다.")
                 return
             }
+            
         }
+        signUp()
     }
     
     func signUpAlert(_ field: UITextField) {
