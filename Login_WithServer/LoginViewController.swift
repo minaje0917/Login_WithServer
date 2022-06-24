@@ -8,10 +8,14 @@
 import UIKit
 import SnapKit
 import Then
-import Alamofire
+import Moya
 
 class LoginViewController: UIViewController {
     private let bounds = UIScreen.main.bounds
+    var essentialFieldList = [UITextField]()
+    
+    private let authProvider = MoyaProvider<LoginServices>()
+    var userData: SigninModel?
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
@@ -53,7 +57,43 @@ class LoginViewController: UIViewController {
         addView()
         setLayout()
         view.backgroundColor = .white
+        essentialFieldList = [idField, pwField]
+    }
+    @objc func LoginAction() {
         
+        for field in essentialFieldList {
+            if !isFilled(field) {
+                LoginAlert(field)
+            }
+            
+        }
+        signin()
+    }
+    
+    func LoginAlert(_ field: UITextField) {
+        DispatchQueue.main.async {
+            var title = ""
+            switch field {
+            case self.idField:
+                title = "아이디를 입력해주세요."
+            case self.pwField:
+                title = "비밀번호를 입력해주세요."
+            default:
+                title = "error"
+            }
+            let controller = UIAlertController(title: title, message: nil, preferredStyle: .alert)
+            let cancelAction = UIAlertAction(title: "닫기", style: .cancel) {(action) in
+                
+            }
+            controller.addAction(cancelAction)
+            self.present(controller, animated: true, completion: nil)
+        }
+    }
+    func isFilled(_ textField: UITextField) -> Bool {
+        guard let text = textField.text, !text.isEmpty else {
+            return false
+        }
+        return true
     }
     private func addView() {
         [titleLabel, idField, pwField, loginButton].forEach {
@@ -87,4 +127,24 @@ class LoginViewController: UIViewController {
         }
     }
     
+}
+
+
+extension LoginViewController {
+    func signin() {
+        let param = SigninRequest.init(self.idField.text!, self.pwField.text!)
+        print(param)
+        authProvider.request(.signIn(param: param)) {response in
+            switch response {
+            case .success(let result):
+                do {
+                    self.userData = try result.map(SigninModel.self)
+                } catch(let err) {
+                    print(err.localizedDescription)
+                }
+            case .failure(let err):
+                print(err.localizedDescription)
+            }
+        }
+    }
 }
