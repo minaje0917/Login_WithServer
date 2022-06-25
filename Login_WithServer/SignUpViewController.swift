@@ -1,6 +1,6 @@
 //
 //  LoginViewController.swift
-//  Login_WithServer
+//  Login_WithServer/Users/seonminjae/Desktop/Login_WithServer/Login_WithServer/SceneDelegate.swift
 //
 //  Created by 선민재 on 2022/06/14.
 //
@@ -13,7 +13,7 @@ import Moya
 class SignUpViewController: UIViewController {
     private let bounds = UIScreen.main.bounds
     
-    private let authProvider = MoyaProvider<LoginServices>()
+    private let authProvider = MoyaProvider<LoginServices>(plugins: [NetworkLoggerPlugin()])
     var userData: SignupModel?
     
     var essentialFieldList = [UITextField]()
@@ -118,9 +118,9 @@ class SignUpViewController: UIViewController {
                 passwordAlert(title: "비밀번호가 일치하지 않습니다.")
                 return
             }
-            
         }
         signUp()
+        self.navigationController?.popViewController(animated: true)
     }
     
     func signUpAlert(_ field: UITextField) {

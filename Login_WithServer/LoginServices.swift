@@ -24,7 +24,7 @@ extension LoginServices: TargetType {
         case .signUp:
             return "/user/register"
         case .signIn:
-            return "user/login"
+            return "/user/login"
         }
     }
     

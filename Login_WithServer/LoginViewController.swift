@@ -14,7 +14,7 @@ class LoginViewController: UIViewController {
     private let bounds = UIScreen.main.bounds
     var essentialFieldList = [UITextField]()
     
-    private let authProvider = MoyaProvider<LoginServices>()
+    private let authProvider = MoyaProvider<LoginServices>(plugins: [NetworkLoggerPlugin()])
     var userData: SigninModel?
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -50,7 +50,7 @@ class LoginViewController: UIViewController {
         $0.setTitle("로그인", for: .normal)
         $0.backgroundColor = .systemBlue.withAlphaComponent(0.8)
         $0.layer.cornerRadius = 10
-        //$0.addTarget(self, action: #selector(LoginAction), for: .touchUpInside)
+        $0.addTarget(self, action: #selector(LoginAction), for: .touchUpInside)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
