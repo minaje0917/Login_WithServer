@@ -13,6 +13,7 @@ import Moya
 class LoginViewController: UIViewController {
     private let bounds = UIScreen.main.bounds
     var essentialFieldList = [UITextField]()
+    let code = response?.response?.statusCode
     
     private let authProvider = MoyaProvider<LoginServices>(plugins: [NetworkLoggerPlugin()])
     var userData: SigninModel?
