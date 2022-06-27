@@ -132,7 +132,7 @@ class SignUpViewController: UIViewController {
             case self.pwField:
                 title = "비밀번호를 입력해주세요"
             case self.checkPwField:
-                title = "비밀번호를 확인해주세요git"
+                title = "비밀번호를 확인해주세요"
             default:
                 title = "error"
             }
