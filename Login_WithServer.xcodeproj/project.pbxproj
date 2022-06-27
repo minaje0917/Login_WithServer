@@ -80,23 +80,95 @@
 		7780BFEE28549184009B8341 /* Login_WithServer */ = {
 			isa = PBXGroup;
 			children = (
+				779FAF6D28697F9200234E1F /* Sources */,
+				779FAF6C28697F6800234E1F /* Resources */,
+				7780BFFD28549184009B8341 /* Info.plist */,
+			);
+			path = Login_WithServer;
+			sourceTree = "<group>";
+		};
+		779FAF6C28697F6800234E1F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				779FAF742869805800234E1F /* Storyboards */,
 				7780BFEF28549184009B8341 /* AppDelegate.swift */,
 				7780BFF128549184009B8341 /* SceneDelegate.swift */,
-				7780BFF328549184009B8341 /* ViewController.swift */,
 				7780BFF828549184009B8341 /* Assets.xcassets */,
-				7780BFFA28549184009B8341 /* LaunchScreen.storyboard */,
-				7780BFFD28549184009B8341 /* Info.plist */,
-				773527C728580DF0002756B9 /* LoginViewController.swift */,
-				773527CB28595A71002756B9 /* SignUpViewController.swift */,
-				779FAF5A28632D6A00234E1F /* GeneralAPI.swift */,
-				779FAF5C28632E0700234E1F /* LoginServices.swift */,
+				779FAF6E28697FBA00234E1F /* APIServices */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		779FAF6D28697F9200234E1F /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				779FAF732869800300234E1F /* Models */,
+				779FAF7228697FF800234E1F /* Designs */,
+				779FAF7128697FF200234E1F /* Cells */,
+				779FAF7028697FEA00234E1F /* Classes */,
+				779FAF6F28697FE400234E1F /* VCs */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		779FAF6E28697FBA00234E1F /* APIServices */ = {
+			isa = PBXGroup;
+			children = (
 				779FAF662865781200234E1F /* SigninRequest.swift */,
 				779FAF5E2863317700234E1F /* SignupRequest.swift */,
 				779FAF602863E97900234E1F /* SignupModel.swift */,
 				779FAF682865782200234E1F /* SigninModel.swift */,
 				779FAF6A2868AE9A00234E1F /* NetworkResult.swift */,
+				779FAF5C28632E0700234E1F /* LoginServices.swift */,
+				779FAF5A28632D6A00234E1F /* GeneralAPI.swift */,
 			);
-			path = Login_WithServer;
+			path = APIServices;
+			sourceTree = "<group>";
+		};
+		779FAF6F28697FE400234E1F /* VCs */ = {
+			isa = PBXGroup;
+			children = (
+				7780BFF328549184009B8341 /* ViewController.swift */,
+				773527C728580DF0002756B9 /* LoginViewController.swift */,
+				773527CB28595A71002756B9 /* SignUpViewController.swift */,
+			);
+			name = VCs;
+			sourceTree = "<group>";
+		};
+		779FAF7028697FEA00234E1F /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		779FAF7128697FF200234E1F /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		779FAF7228697FF800234E1F /* Designs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Designs;
+			sourceTree = "<group>";
+		};
+		779FAF732869800300234E1F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		779FAF742869805800234E1F /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				7780BFFA28549184009B8341 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
