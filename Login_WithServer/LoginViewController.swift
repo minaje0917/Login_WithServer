@@ -9,11 +9,12 @@ import UIKit
 import SnapKit
 import Then
 import Moya
+import SwiftUI
 
 class LoginViewController: UIViewController {
     private let bounds = UIScreen.main.bounds
     var essentialFieldList = [UITextField]()
-    let code = response?.response?.statusCode
+    //var loginProvider = MoyaProvider<LoginServices>(plugins: [NetworkLoggerPlugin()])
     
     private let authProvider = MoyaProvider<LoginServices>(plugins: [NetworkLoggerPlugin()])
     var userData: SigninModel?
@@ -130,8 +131,23 @@ class LoginViewController: UIViewController {
     
 }
 
-
 extension LoginViewController {
+    func success() {
+        print("success")
+        let successAlert = UIAlertController(title: "성공", message: "로그인에 성공하셨습니다.", preferredStyle: .alert)
+        let successAction = UIAlertAction(title: "확인", style: .cancel) {(action) in
+            self.navigationController?.popViewController(animated: true)
+        }
+        successAlert.addAction(successAction)
+        self.present(successAlert, animated: true, completion: nil)
+    }
+    func faliure() {
+        let faliureAlert = UIAlertController(title: "실패", message: "아이디 혹은 비밀번호를 다시 확인해주세요", preferredStyle: .alert)
+        let faliureAction = UIAlertAction(title: "확인", style: .cancel) {(action) in
+        }
+        faliureAlert.addAction(faliureAction)
+        self.present(faliureAlert, animated: true, completion: nil)
+    }
     func signin() {
         let param = SigninRequest.init(self.idField.text!, self.pwField.text!)
         print(param)
@@ -142,6 +158,14 @@ extension LoginViewController {
                     self.userData = try result.map(SigninModel.self)
                 } catch(let err) {
                     print(err.localizedDescription)
+                }
+                let statusCode = result.statusCode
+                switch statusCode {
+                case 200..<300:
+                    self.success()
+                default:
+                    self.faliure()
+                    
                 }
             case .failure(let err):
                 print(err.localizedDescription)

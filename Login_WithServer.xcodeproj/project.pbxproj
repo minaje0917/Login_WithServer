@@ -24,6 +24,7 @@
 		779FAF612863E97900234E1F /* SignupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779FAF602863E97900234E1F /* SignupModel.swift */; };
 		779FAF672865781200234E1F /* SigninRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779FAF662865781200234E1F /* SigninRequest.swift */; };
 		779FAF692865782200234E1F /* SigninModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779FAF682865782200234E1F /* SigninModel.swift */; };
+		779FAF6B2868AE9A00234E1F /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779FAF6A2868AE9A00234E1F /* NetworkResult.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		779FAF602863E97900234E1F /* SignupModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupModel.swift; sourceTree = "<group>"; };
 		779FAF662865781200234E1F /* SigninRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninRequest.swift; sourceTree = "<group>"; };
 		779FAF682865782200234E1F /* SigninModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninModel.swift; sourceTree = "<group>"; };
+		779FAF6A2868AE9A00234E1F /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 				779FAF5E2863317700234E1F /* SignupRequest.swift */,
 				779FAF602863E97900234E1F /* SignupModel.swift */,
 				779FAF682865782200234E1F /* SigninModel.swift */,
+				779FAF6A2868AE9A00234E1F /* NetworkResult.swift */,
 			);
 			path = Login_WithServer;
 			sourceTree = "<group>";
@@ -182,6 +185,7 @@
 				773527C828580DF0002756B9 /* LoginViewController.swift in Sources */,
 				7780BFF428549184009B8341 /* ViewController.swift in Sources */,
 				779FAF692865782200234E1F /* SigninModel.swift in Sources */,
+				779FAF6B2868AE9A00234E1F /* NetworkResult.swift in Sources */,
 				7780BFF028549184009B8341 /* AppDelegate.swift in Sources */,
 				779FAF672865781200234E1F /* SigninRequest.swift in Sources */,
 				779FAF5B28632D6A00234E1F /* GeneralAPI.swift in Sources */,
