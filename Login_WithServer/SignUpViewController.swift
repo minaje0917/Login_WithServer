@@ -128,11 +128,11 @@ class SignUpViewController: UIViewController {
             var title = ""
             switch field {
             case self.idField:
-                title = "아이디를 입력해주세요."
+                title = "아이디를 입력해주세요"
             case self.pwField:
-                title = "비밀번호를 입력해주세요."
+                title = "비밀번호를 입력해주세요"
             case self.checkPwField:
-                title = "비밀번호를 확인해주세요."
+                title = "비밀번호를 확인해주세요git"
             default:
                 title = "error"
             }
