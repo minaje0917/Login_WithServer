@@ -9,7 +9,6 @@ import UIKit
 import SnapKit
 import Then
 import Moya
-import SwiftUI
 
 class LoginViewController: UIViewController {
     private let bounds = UIScreen.main.bounds
